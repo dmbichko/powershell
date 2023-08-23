@@ -4,7 +4,6 @@ $User = 'sa'
 $backupDirectory='C:\var\opt\mssql\data\backup'
 # Convert plain text into a secure string
 $Pass = Get-Content D:\BackUp1с83\sql.txt |ConvertTo-SecureString
-$Pass = ConvertTo-SecureString 'Password_01' -AsPlainText –Force
 #supply the $Pass variable as SecureString for the password
 $Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User,$Pass
 #Build the connection
